@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="340.0" prefWidth="193.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="chartdrawer.FXMLDocumentController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#addNewFile" prefHeight="40.0" prefWidth="194.0" text="Dodaj plik z danymi" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" onAction="#approximate" prefHeight="40.0" prefWidth="194.0" text="Aproksymuj" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+      <Button layoutY="80.0" mnemonicParsing="false" onAction="#clearData" prefHeight="40.0" prefWidth="194.0" text="Wyczyść" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+      <Button layoutX="-1.0" layoutY="300.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="40.0" prefWidth="194.0" text="Wyjscie" />
+      <Label fx:id="r2_label" layoutX="14.0" layoutY="127.0" prefHeight="40.0" prefWidth="162.0" text="R^2:" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="130.0" />
+      <Label fx:id="functionLabel" layoutX="14.0" layoutY="170.0" prefHeight="40.0" prefWidth="165.0" text="F(x):" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="170.0" />
+      <Button layoutX="14.0" layoutY="210.0" mnemonicParsing="false" onAction="#addNewFunction" prefHeight="22.0" prefWidth="165.0" text="Dodaj nowa funkcje" />
+      <Button layoutX="14.0" layoutY="236.0" mnemonicParsing="false" onAction="#showFunctions" prefHeight="26.0" prefWidth="165.0" text="Wyswietl dostepne" />
+   </children>
+</AnchorPane>
