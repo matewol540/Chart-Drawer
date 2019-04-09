@@ -17,11 +17,11 @@ import javafx.scene.chart.ScatterChart;
  *
  * @author User
  */
-public class point {
+public class fileManager {
 
     private List<ScatterChart.Series<Number, Number>> ListOfSeries;
 
-    public point() {
+    public fileManager() {
         this.ListOfSeries = new ArrayList<>();
     }
 
