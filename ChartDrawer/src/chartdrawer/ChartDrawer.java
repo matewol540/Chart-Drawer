@@ -15,15 +15,23 @@ import javafx.stage.Stage;
  *
  * @author User
  */
+
+//Klasa uruchomieniowa
 public class ChartDrawer extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        //Pobranie pliku z widokiem
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        //Utworzenie sceny na podstawie pobranego widoku
         Scene scene = new Scene(root);
+        //Ustawanie sceny w oknie
         stage.setScene(scene);
+        stage.setTitle("Kontroler");
+        //Wywołanie okna
         stage.show();
         stage.setResizable(false);
+
     }
 
     /**

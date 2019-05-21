@@ -26,34 +26,37 @@ public class fileManager {
     }
 
     public ScatterChart.Series<Number, Number> getDataFromFile(File _file) throws FileNotFoundException {
+        //Pobranie nazwy pliku
         String filename = _file.getName();
         String[] temp = filename.split("\\.");
         ScatterChart.Series<Number, Number> serie;
+        //W zaleznosci od rozszerzenie wybranie metodu rozdzialu danych
         if (temp[1].equals("csv")) {
             serie = addDataFromCSV(_file);
         } else {
             serie = addDataFromTSV(_file);
         }
+        //Dodanie serii danych do listy
         ListOfSeries.add(serie);
+        //Zwrocenie serii danych
         return serie;
     }
 
     private ScatterChart.Series<Number, Number> addDataFromCSV(File data) throws FileNotFoundException {
         ScatterChart.Series<Number, Number> temp = new ScatterChart.Series<>();
-
         Scanner sc = new Scanner(data);
         List<String> dataRead = new ArrayList<>();
-
+        //Wczytanie wszystkich danych do listy
         while (sc.hasNext()) {
             dataRead.add(sc.next());
         }
-
         boolean isX = true;
         double x = 0;
         double y = 0;
+        //Odczyt w petli kazdego punktu i dodanie go do serii danych
         for (String s : dataRead) {
             String[] temporary = s.split(",");
-            temp.getData().add(new ScatterChart.Data<>(Double.parseDouble(temporary[0]),Double.parseDouble(temporary[1])));
+            temp.getData().add(new ScatterChart.Data<>(Double.parseDouble(temporary[0]), Double.parseDouble(temporary[1])));
         }
 
         return temp;
@@ -63,20 +66,21 @@ public class fileManager {
         Scanner sc = new Scanner(data);
         List<String> dataRead = new ArrayList<>();
         ScatterChart.Series<Number, Number> temp = new ScatterChart.Series<>();
+        //Wczytanie wszystkich danych do listy
         while (sc.hasNext()) {
             dataRead.add(sc.next());
         }
-
+        //Odczyt w petli kazdego punktu i dodanie go do serii danych
         for (int l = 0; l < dataRead.size() - 1; l = l + 2) {
             double x = Double.parseDouble(dataRead.get(l));
             double y = Double.parseDouble(dataRead.get(l + 1));
             temp.getData().add(new ScatterChart.Data<>(x, y));
         }
         return temp;
-
     }
 
-    public void clearList(){
+    public void clearList() {
+        //Wyczyszczenie listy
         ListOfSeries.clear();
     }
 }

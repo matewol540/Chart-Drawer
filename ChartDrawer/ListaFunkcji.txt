@@ -3,5 +3,6 @@
 (sin(x))
 (sin(cos(x)))
 (acos(cos(sin(x+4))))
-
 (x+100-100)
+(log(x))
+(ln(x))
