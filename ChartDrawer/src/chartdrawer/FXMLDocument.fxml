@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-
+<!--Plik FXML służący do generowania kontorlek dokumentu -->
 <AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chartdrawer.FXMLDocumentController">
    <children>
       <VBox alignment="CENTER" fillWidth="false" spacing="10.0">
